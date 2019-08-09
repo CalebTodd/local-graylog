@@ -1,0 +1,33 @@
+{
+  "template": "graylog_*",
+  "mappings": {
+    "message": {
+      "properties": {
+        "ELB_TIMESTAMP": {
+          "type" : "date",
+          "format" : "date_time"
+        },
+        "ELB_NAME": {
+          "type" : "text",
+          "analyzer": "standard"
+        },
+        "ELB_STATUS_CODE": {
+          "type": "integer"
+        },
+        "ELB_BACKEND_STATUS_CODE": {
+          "type": "integer"
+        },
+        "ELB_REQUEST": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": false
+        },
+        "ELB_USER_AGENT": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": false
+        }
+      }
+    }
+  }
+}
